@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Cancel Appointment button style -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Style when press -->
+    <item android:state_pressed="true" android:color="@color/loginbtn">
+        <shape>
+        </shape>
+    </item>
+
+    <!-- Style -->
+    <item android:color="@color/blue">
+        <shape>
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:barrierAllowsGoneWidgets="true"
+    android:fillViewport="true"
+    android:overScrollMode="never">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="edu.salemstate.cs.advising.MainActivity">
+
+
+        <!-- Header image -->
+        <ImageView
+            android:id="@+id/header"
+            android:layout_width="0dp"
+            android:layout_height="77dp"
+            android:background="@drawable/shadow_bottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@color/blue"
+            tools:ignore="ContentDescription" />
+
+
+        <!-- Logo image -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.025"
+            app:srcCompat="@drawable/logo"
+            tools:ignore="ContentDescription" />
+
+
+        <!-- View Available Appointments button frame -->
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="0dp"
+            android:layout_height="67dp"
+            android:background="@drawable/shadow_top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/frame1"
+            app:layout_constraintVertical_bias="1.0">
+
+            <!-- View Available Appointments button -->
+            <Button
+                android:id="@+id/showAppointments"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/appointmentsbtn"
+                android:src="@drawable/appointmentsbtn"
+                android:text="@string/showAppointments"
+                android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/frame"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </FrameLayout>
+
+
+        <!-- Booked appointment top frame line. -->
+        <FrameLayout
+            android:id="@+id/framelinetop"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_top"
+            android:visibility="invisible"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appointmentInfo"
+            app:layout_constraintVertical_bias="1.0">
+
+            <View
+                android:id="@+id/viewline1"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#757070"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appointmentInfo" />
+
+        </FrameLayout>
+
+
+        <!-- Booked appointment box -->
+        <ImageView
+            android:id="@+id/appointmentBox"
+            android:layout_width="412dp"
+            android:layout_height="90dp"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/framelinetop"
+            tools:ignore="ContentDescription" />
+
+
+        <!-- Appointment status Booked text -->
+        <TextView
+            android:id="@+id/appointmentInfo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="84dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:text="@string/aptmtScheduled"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/appointmentsbtn1"
+            android:textSize="14sp"
+            android:visibility="invisible"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/roomNum" />
+
+
+        <!-- Appointment status not Booked text -->
+        <TextView
+            android:id="@+id/noAppointmentInfo"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="@string/noAptmtScheduled"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@color/appointmentsbtn1"
+            android:textSize="15sp"
+            android:visibility="invisible"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/frame"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/advisorRoom"
+            app:layout_constraintVertical_bias="0.339" />
+
+
+        <!-- Booked appointment bottom frame line -->
+        <FrameLayout
+            android:id="@+id/framelinebottom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/shadow_bottom"
+            android:visibility="invisible"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appointmentBox"
+            app:layout_constraintVertical_bias="1.0">
+
+            <View
+                android:id="@+id/viewline2"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="#757070"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/appointmentBox" />
+
+        </FrameLayout>
+
+
+        <!-- Booked appointment time -->
+        <TextView
+            android:id="@+id/appointmentTime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="#000000"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/appointmentBox"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appointmentDate"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <!-- Advisee name -->
+        <TextView
+            android:id="@+id/adviseeName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            app:autoSizeMaxTextSize="23sp"
+            app:autoSizeMinTextSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/hi"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- Welcome text -->
+        <TextView
+            android:id="@+id/hi"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="96dp"
+            android:text="@string/hi"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="@color/blue"
+            android:textSize="22sp"
+            app:autoSizeMaxTextSize="23sp"
+            app:autoSizeMinTextSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <!-- Your advisor text -->
+        <TextView
+            android:id="@+id/yourAdvisor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/yourAdvisor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/adviseeName" />
+
+
+        <!-- Advisor name -->
+        <TextView
+            android:id="@+id/advisorName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/yourAdvisor"
+            app:layout_constraintTop_toBottomOf="@+id/adviseeName" />
+
+
+        <!-- You Advisor room number text -->
+        <TextView
+            android:id="@+id/advisorRoom"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="45dp"
+            android:layout_marginLeft="45dp"
+            android:layout_marginTop="4dp"
+            android:text="@string/room"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/advisorName" />
+
+
+        <!-- Advisor room number -->
+        <TextView
+            android:id="@+id/roomNum"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/advisorRoom"
+            app:layout_constraintTop_toBottomOf="@+id/advisorName" />
+
+
+        <!-- Appointment Date -->
+        <TextView
+            android:id="@+id/appointmentDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#B4575757"
+
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appointmentBox" />
+
+
+        <!-- Cancel appointment button -->
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="110dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/cancelbtn"
+            android:text="@string/cancel"
+            android:textColor="@drawable/cancelbtn"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/appointmentBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appointmentBox" />
+
+
+        <!-- Completed appointment button -->
+        <Button
+            android:id="@+id/completed"
+            android:layout_width="110dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:background="@drawable/cancelbtn"
+            android:text="@string/completed"
+            android:textColor="@drawable/cancelbtn"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="@id/appointmentBox"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/appointmentBox" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>

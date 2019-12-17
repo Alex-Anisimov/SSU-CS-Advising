@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Login button style -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Style when press -->
+    <item android:state_pressed="true">
+        <shape>
+            <solid android:color="@color/loginbtn" android:width="2dp"/>
+            <corner android:radius="2dp"/>
+        </shape>
+    </item>
+
+    <!-- Style -->
+    <item>
+        <shape>
+            <solid android:color="@color/blue" android:width="2dp"/>
+            <corner android:radius="2dp"/>
+        </shape>
+    </item>
+
+</selector>

@@ -1,0 +1,48 @@
+<resources>
+
+    <!-- Base theme -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+    <!-- No Action Bar -->
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <!-- Login field style. -->
+    <style name="LoginField">
+        <item name="colorControlNormal">@color/white</item>
+        <item name="colorControlActivated">@color/white</item>
+        <item name="colorControlHighlight">@color/white</item>
+    </style>
+
+
+    <!-- Alert dialog style. -->
+    <style name="AlertDialogTheme" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="buttonBarNegativeButtonStyle">@style/NegativeButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/PositiveButtonStyle</item>
+    </style>
+
+    <!-- Alert dialog Cancel button style. -->
+    <style name="NegativeButtonStyle">
+        <item name="android:textColor">@color/gray</item>
+        <item name="android:background">@drawable/cancelbtn</item>
+    </style>
+
+    <!-- Alert dialog Ok button style. -->
+    <style name="PositiveButtonStyle">
+        <item name="android:textColor">@drawable/cancelbtn</item>
+        <item name="android:background">@drawable/cancelbtn</item>
+    </style>
+
+
+
+
+
+
+</resources>

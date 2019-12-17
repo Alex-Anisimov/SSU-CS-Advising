@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Application name. -->
+    <string name="app_name">SSU CS Advising</string>
+    <string name="app_name_short">Advising</string>
+
+    <!-- API link. -->
+    <string name="link">http://weblab.salemstate.edu/~advising2</string>
+
+
+    <!-- Login Activity strings. -->
+    <string name="csDept">Computer Science \n Department</string>
+    <string name="welcomeAdvisee">Welcome, Advisee \n Type your information to login!</string>
+    <string name="ssuId">SSU ID</string>
+    <string name="ssuEmail">SSU Email</string>
+    <string name="login">Login</string>
+
+    <!-- Main Activity strings. -->
+    <string name="hi">Hi\t\t</string>
+    <string name="yourAdvisor">You advisor is Prof.\t</string>
+    <string name="room">Room\t</string>
+    <string name="noAptmtScheduled">You have no scheduled appointments!\t</string>
+    <string name="aptmtScheduled">You have a scheduled appointment!\t</string>
+    <string name="cancel">Cancel</string>
+    <string name="completed">Completed</string>
+    <string name="book">Book</string>
+    <string name="showAppointments">View available appointments</string>
+
+    <!-- Appointments Activity strings. -->
+    <string name="noAppointments">No available appointments</string>
+
+</resources>
